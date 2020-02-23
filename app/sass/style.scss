@@ -1,0 +1,461 @@
+@import 'mixins';
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+input {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.section-1 {
+
+	@include flexbox;
+
+	.left-col {
+		@include flexgrow(1);
+		padding: 40px 80px 220px;
+		background: url('../img/fs.jpg') no-repeat;
+		background-position: top center;
+		background-size: cover;
+
+		.logos {
+			@include flexbox;
+			margin-bottom: 120px;
+
+			.logo-1 {
+				padding-right: 150px;
+			}
+
+			.logo-2 {
+				@include flexbox;
+
+				span {
+					padding-top: 2px;
+					padding-left: 18px;
+					font-size: 19px;
+					line-height: 22px;
+					font-weight: 300;
+					color: #fff;
+					text-shadow: 1px 1px #000;
+				}
+			}
+		}
+
+		.vip-ticket {
+			color: #fff;
+			width: 690px;
+			padding-bottom: 20px;
+			background: rgba(17,158,217,.8);
+
+			&__header  {
+				@include boxsizing;
+				width: 95%;
+				padding: 20px 0 20px 34px;
+				border-bottom: 4px solid #fff;
+				font-size: 43px;
+				line-height: 45px;
+				font-weight: 300;
+			}
+
+			&__desc {
+				padding: 14px 0 0 34px;
+				font-size: 15px;
+				line-height: 18px;
+				font-weight: 300;
+			}
+			
+			&__question {
+				padding: 14px 0 12px 34px;
+				font-size: 22px;
+				font-weight: 300;
+			}
+
+			&__list  {
+
+				.list-line {
+					@include flexbox;
+					padding-left: 67px;
+					margin-bottom: 8px;
+					background: url('../img/list_icon.png') no-repeat;
+					background-position-x: 45px;
+					background-position-y: 1px;
+
+					&__text {
+						font-size: 15px;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+
+/* END .section-1 .left-col */
+
+	.right-col {
+		width: 400px;
+		padding-bottom: 130px;
+		background-color: #000;
+		background-image: url('../img/rc_bg.jpg');
+		background-repeat: no-repeat;
+		background-position: right;
+
+		&__logo {
+			width: 190px;
+			height: 142px;
+			margin: 40px auto;
+			background: url('../img/24.png');
+		}
+	
+		&__desc {
+			font-size: 28px;
+			color: #fff;
+			text-align: center;
+			margin-bottom: 56px;
+		}
+
+		&__sign-up {
+			font-size: 55px;
+			color: #fff;
+			text-align: center;
+			font-weight: 300;
+			margin-bottom: 16px;
+		}
+		
+		.sign-up {
+			margin-bottom: 30px;
+
+			.sign-up-form {
+				&__input {
+					width: 290px;
+					display: block;
+					text-align: center;
+					margin: 0 auto 17px;
+					padding: 14px;
+					@include boxsizing;
+					background: #d7d7d7;
+					border: none;
+					font-size: 18px;
+					font-weight: 300;
+					color: #000;
+
+					&:focus {
+						background: #fff;
+					}
+				}
+
+				.open-account {
+					width: 290px;
+					padding: 14px;
+					@include boxsizing;
+					background: #d50a51;
+					font-size: 20px;
+					font-weight: 300;
+					color: #fff;
+					text-align: center;
+					margin: 0 auto 20px;
+					cursor: pointer;
+					border: none;
+					display: block;
+				}
+
+				label {
+					font-size: 13px;
+					color: #fff;
+					font-weight: 300;
+					margin: 0 auto;
+					@include flexbox;
+					@include justifycontent(center);
+					@include alignitems(center);
+
+					input {
+						width: 18px;
+						height: 18px;
+					}
+				}
+			}
+		}
+
+		.privacy-policy {
+			text-align: center;
+			margin-bottom: 50px;
+			
+			a {
+				font-size: 14px;
+				font-weight: 300;
+				color: #fff;
+			}
+		}
+
+		.risk {
+			font-size: 13px;
+			color: #fff;
+			font-weight: 300;
+			text-align: center;
+		}
+		
+	} /* END .right-col */
+} /* END section-1 */
+
+.section-2 {
+	background: #000;
+	padding: 60px 40px 40px 25px;
+	margin-top: 100px;
+
+	.section-inner {
+		width: 1000px;
+		@include flexbox;
+		margin: 0 auto;
+		position: relative;
+
+		.tt_phone_arm {
+			width: 277px;
+			height: 402px;
+			position: absolute;
+			bottom: -40px;
+			right: 0;
+			background: url('../img/tt_phone_arm.png') no-repeat;
+		}
+
+		.left-col {
+			padding-right: 25px;
+		}
+
+		.right-col {
+			&__header {
+				font-size: 30px;
+				font-weight: 100;
+				color: #fff;
+				margin-bottom: 40px;
+			}
+
+			&__header-2 {display: none;}
+
+
+			&__text {
+				font-size: 20px;
+				font-weight: 100;
+				color: #fff;
+				margin-bottom: 35px;
+			}
+
+			&__text-2 {display: none;}
+
+			.tt_app {
+
+				@include flexbox;
+				padding-right: 60px;
+				@include justifycontent(flex-end);
+
+				&__item {
+					padding: 0 10px;
+				}
+			}
+		}
+	}
+} /* END .section-2*/
+
+.section-3 {
+	background: #d50a51;
+	.section-inner {
+		width: 1600px;
+		margin: 0 auto;
+		@include boxsizing;
+		padding: 50px 20px;
+		@include flexbox;
+		@include justifycontent(space-between);
+
+		.left-col {
+			width: 780px;
+			
+			&__header {
+				text-align: center;
+				color: #fff;
+				font-size: 32px;
+				font-weight: 300;
+				margin-bottom: 50px;
+
+				span {
+					font-weight: 400;
+				}
+			}
+
+			&__best {
+				@include flexbox;
+				@include justifycontent(space-between);
+			}
+		}
+
+		.right-col {
+
+			&__header {
+				color: #fff;
+				font-size: 32px;
+				font-weight: 300;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			&__desc {
+				color: #fff;
+				font-size: 14px;
+				font-weight: 300;
+				color: #fff;
+				text-align: center;
+				margin-bottom: 26px;
+			}
+
+			&__buttons {
+				@include flexbox;
+
+				&-button {
+					width: 284px;
+					height: 50px;
+					@include flexbox;
+					@include justifycontent(center);
+					@include alignitems(center);
+
+					a {
+						display: block;
+						width: 100%;
+						height: 100%;
+						text-decoration: none;
+						color: #fff;
+						font-size: 17px;
+						font-weight: 100;
+
+						@include flexbox;
+						@include justifycontent(center);
+						@include alignitems(center);
+					}
+				}
+
+				&-button-1 {
+					border: 2px solid #fff;
+					margin-right: 20px;
+				}
+
+				&-button-2 {
+					border: 2px solid #737373;
+					background: #737373;
+				}
+			}
+		}
+	}
+} /* END .section-3 */
+
+.section-4 {
+	border-bottom: 6px solid #129edb;
+
+	.section-inner {
+		width: 940px;
+		padding: 60px 20px 10px;
+		margin: 0 auto;
+		position: relative;
+		@include flexbox;
+		@include justifycontent(flex-start);
+
+		&__img {
+			margin-right: 20px;
+		}
+
+		&__text {
+			font-size: 17px;
+			padding-top: 26px;
+		}
+
+		&__team {
+			width: 250px;
+			height: 99px;
+			position: absolute;
+			right: 30px;
+			bottom: -6px;
+			background: url('../img/team.png') no-repeat;
+		}
+	}
+} /* END .section-4 */
+
+.section-5 {
+	background: #000;
+	padding: 30px 20px 15px 20px;
+
+	.section-inner {
+		width: 980px;
+		margin: 0 auto;
+		@include flexbox;
+
+		.left-col {
+			width: 630px;
+			@include flexbox;
+			margin-right: 30px;
+
+			&__warn {
+				width: 24px;
+				height: 23px;
+				background: url('../img/warn.png') no-repeat;
+			}
+
+			&__text {
+				width: 600px;
+				@include boxsizing;
+				padding-left: 10px;
+				font-size: 12px;
+				line-height: 16px;
+				font-weight: 300;
+				color: #fefefe;
+			}
+		}
+
+		.right-col {
+			width: 320px;
+			&__header {
+				font-size: 22px;
+				color: #fefefe;
+				font-weight: 300;
+				text-align: center;
+				margin-bottom: 15px;
+			}
+
+			&__follow {
+				@include flexbox;
+				@include justifycontent(space-between);
+			}
+		}
+	}
+} /* END .section-5 */
+
+.section-6 {
+	padding: 60px 20px 90px;
+	background: #56595a;
+
+	.section-inner {
+		width: 980px;
+		margin: 0 auto;
+		@include flexbox;
+		@include justifycontent(space-between);
+
+		&__col {
+			width: 220px;
+
+			&-img {
+				margin-bottom: 25px;
+
+				img {
+					width: 216px;
+				}
+			}
+
+			p {
+				margin-top: 0;
+				margin-bottom: 20px;
+				color: #d9d9d9;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+@import 'media';
